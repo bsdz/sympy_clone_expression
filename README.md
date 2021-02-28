@@ -28,6 +28,6 @@ assert expr_copy == expr
 To generate Python AST for expression (this could be used for pickling for example):
 
 ```python
-ast_expression = to_ast(expr)
-roundtrip_expr = eval(compile(ast_expr, filename="<ast>", mode="eval"))
+ast_expression, symbols = to_ast(expr)
+roundtrip_expr = eval(compile(ast_expr, filename="<ast>", mode="eval"), symbols)
 ```

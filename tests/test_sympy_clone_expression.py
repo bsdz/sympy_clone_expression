@@ -26,6 +26,10 @@ def test_clone():
         sp.Add(sp.Rational(2, 3), sp.Float(sp.pi), evaluate=False),
         # assumptions
         neg_x ** 3 + sp.sin(p),
+        # one
+        sp.core.numbers.One(),
+        # inf
+        sp.core.numbers.Infinity(),
     ]:
         assert clone(expr) == expr
 
@@ -48,11 +52,11 @@ def test_pickle_unpickle_ast():
         # assumptions
         neg_x ** 3 + sp.sin(p),
     ]:
-        ast_expr = to_ast(expr)
+        ast_expr, symbols = to_ast(expr)
         orig = compile(ast_expr, filename="<ast>", mode="eval")
         unpickled_ast_expr = pickle.loads(pickle.dumps(ast_expr))
         new = compile(unpickled_ast_expr, filename="<ast>", mode="eval")
-        assert eval(orig) == eval(new)
+        assert eval(orig, symbols) == eval(new, symbols)
 
 
 def test_7672():
