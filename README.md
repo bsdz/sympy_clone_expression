@@ -6,7 +6,7 @@ Originally submitted as [PR](https://github.com/sympy/sympy/pull/20665) to fix l
 
 # Installation
 ```bash
-$ poetry add git+https://github.com/bsdz/sympy_clone_expression.git#main
+$ pip install git+https://github.com/bsdz/sympy_clone_expression.git#main
 ```
 
 # Usage
