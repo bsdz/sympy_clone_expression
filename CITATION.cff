@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: Sympy Clone Expression
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Blair
+    family-names: Azzopardi
+    email: blairuk@gmail.com
+repository-code: 'https://github.com/bsdz/sympy_clone_expression'
+abstract: >-
+  Simple clone function (aka deepcopy by Python AST)  that
+  supports non-evaluation.
