@@ -10,5 +10,6 @@ authors:
     email: blairuk@gmail.com
 repository-code: 'https://github.com/bsdz/sympy_clone_expression'
 abstract: >-
-  Simple clone function (aka deepcopy by Python AST)  that
+  Simple clone function (aka deepcopy by Python AST) that
   supports non-evaluation.
+date-released: 2020-12-26
